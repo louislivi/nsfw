@@ -1,0 +1,42 @@
+
+#watermark {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -51px;
+    margin-left: -51px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50px;
+    border: solid #fff 2px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+   not supported by any browser */
+}
+
+#preview{
+    /*vertical-align:middle;*/
+    max-width: 100%;
+    max-height:100%;
+    -webkit-filter:brightness(.6);
+}
+
+#img_data{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    /*display: table-cell;*/
+    text-align:center;
+    /*vertical-align:middle;*/
+    background-color: #F0F0F0;
+}

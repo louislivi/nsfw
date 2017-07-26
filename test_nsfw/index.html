@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图像审核_色情识别</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="色情识别,色情识别,色情识别,鉴黄师,鉴黄系统,鉴黄,网络鉴黄,图像鉴黄,">
+    <meta name="description" content="色情识别，依托全网海量优质数据和领先的深度神经网络技术，智能鉴别色情图片内容，为您的产品/服务保驾护航，远离违规风险。">
+    <meta name="baidu-site-verification" content="GOPjfm49Yc"/>
+    <link rel="stylesheet" type="text/css" href="css/1.css"/>
+    <link rel="stylesheet" type="text/css" href="css/2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body class="ai-platform">
+<div class="ai-content">
+
+    <section class="tech-section tech-demo" id="tech-demo">
+        <div class="container">
+            <div class="tech-demo-title">功能演示</div>
+            <div class="demo-container clear-float">
+                <div class="clear-float">
+                    <div class="data-view-container">
+                        <div align="center" class="data-view" data-label="识别结果" id="img_data">
+                            <!--<div class="canvas-container"></div>-->
+                            <img src="./img/demo-card-1.jpg" alt="图片" id="preview"/>
+                            <div id="result-gallery">
+                                <ul></ul>
+                            </div>
+                            <ul id="face-details">
+
+                            </ul>
+                            <div id="watermark">
+                                <span unselectable="on" onselectstart="return false;" class="noselect" style="color:#fff;font-size: 250%;font-weight: bold">性感</span>
+                                <br/>
+                                <span unselectable="on" onselectstart="return false;" class="noselect" style="font-size: 100%;color: #fff">评分:66分</span>
+                            </div>
+                        </div>
+                        <div class="demo-data">
+                            <label for="demo-photo-url" style="display:none"></label>
+                            <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL">
+                            <button type="button" class="btn-primary" id="scan-photo">检测</button>
+                            <span>或</span>
+                            <label id="demo-photo-upload"><input id="doc" type="file">本地上传</label>
+                        </div>
+                        <p class="demo-desc">
+                            提示：可支持PNG、JPG、jpeg、BMP图片文件，不支持GIF图片，图片大小不超过2M，为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                    </div>
+                    <div class="data-view-container">
+                        <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                <ul class="demo-card-list clear-float" id="img_item">
+                <li>
+                <img src="./img/demo-card-1.jpg"
+                alt=" ">
+                </li>
+                <li>
+                <img src="./img/demo-card-2.jpg"
+                alt=" ">
+                </li>
+                <li>
+                <img src="./img/demo-card-3.jpg"
+                alt=" ">
+                </li>
+                <li>
+                <img src="./img/demo-card-4.jpg"
+                alt=" ">
+                </li>
+                <li>
+                <img src="./img/demo-card-5.jpg"
+                alt=" ">
+                </li>
+                <li>
+                <img src="./img/demo-card-6.jpg"
+                alt=" ">
+                </li>
+                <li>
+                <img src="./img/demo-card-7.jpg"
+                alt=" ">
+                </li>
+                <li>
+                <img src="./img/demo-card-8.jpg"
+                alt=" ">
+                </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+</div>
+</div>
+</div>
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+    var _img=document.getElementById('img_item');
+    var _img_list=_img.getElementsByTagName('li');
+    var _img_src=_img.getElementsByTagName('img')
+    for(var i=0;i<_img_list.length;i++){
+        _img_list[i].index=i
+        _img_list[i].onclick=function () {
+            url_test_nsfw(_img_src[this.index].src,1)
+        }
+    }
+</script>
+</body>
+</html>
